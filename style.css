@@ -1,16 +1,116 @@
 html, body {
+  margin: 0px;
   height: 100%;
   width: 100%;
   font-family: sans-serif;
+  background-color: #344388;
+}
+
+/*Fiddly way to get a centered title. Referenced https://css-tricks.com/how-to-stack-elements-in-css/*/
+#titleText{
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  font-size: 100;
+  color: #fcfefb;
+  font-family: "Courier New", monospace;
+  font-weight: lighter;
+}
+
+header{
+  grid-area: header;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav{
+  grid-area: nav;
+  background-color: #f0ebd4;
+  border-radius: 10px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-top: 5px solid #0b1035;
+}
+
+main{
+  grid-area: main;
+  background-color: #f0ede4;
+  border-radius: 10px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-top: 5px solid #0b1035;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #4f5783;
 }
 
 #bannerimg{
+  margin: 0px;
   height: 250px;
   width: 100%;
   object-fit: cover;
-  object-position: 0 75%;
+  object-position: 0 65%;
 }
 
 #navLinks{
   list-style-type: none;
+}
+
+a{
+  color:#3a4060;
+}
+a:visited{
+  color: #221722;
+}
+a:hover{
+  background-color: #aec4ee;
+}
+
+#conceptsOutline{
+  list-style-type: upper-roman;
+}
+
+ol.nestedList{
+  list-style-type: lower-roman;
+}
+li.everyOtherLine{
+  background-color: #cdd6ef;
+}
+
+.gridWrapper{
+  margin: 0px;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 15px;
+  grid-template-areas: "header header header"
+                       "nav main main"
+                       "nav main main"
+                       "nav main main"
+                       "footer footer footer";
+}
+
+table{
+  background-color: white;
+  position: relative;
+  left: 80px;
+  border: 1px solid;
+  font-size: 1.5em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+th{
+  background-color: black;
+  color: white;
+  border: 1px solid;
+}
+
+td{
+  border: 2px double black;
+  color: #f411f5;
+}
+
+td.ul{
+  margin: 0px;
 }

@@ -1,3 +1,4 @@
+
 //array of taken usernames to check against
 const usernames = ["Harry",  "Elizabeth", "Shana"];
 
@@ -17,4 +18,17 @@ function validateForm(){
 	}else{
 		return true;
 	}	
+}
+
+function drawText(){
+	const canvas = document.getElementById("theCanvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+			ctx.fillStyle = "#FFF";
+			ctx.font = "30px sans-serif";
+			ctx.fillText("I'm an HTML", 10, 30);
+			ctx.fillText("canvas for ",10, 60);
+			ctx.fillText("ultra modern art.", 10, 90);
+        }
+	
 }

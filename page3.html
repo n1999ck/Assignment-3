@@ -19,7 +19,7 @@
 		<nav>
 			<h2>Navigation</h2>
 			<ul id="navLinks"></ul>
-			<li><a href="index.html">Home</a></li>
+			<li><a href="index.html" tabindex="1">Home</a></li>
 			<li><a href="page1.html">Page 1</a></li>
 			<li><a href="page2.html">Page 2</a></li>
 			<li><a href="page3.html">Page 3</a></li>
@@ -27,37 +27,60 @@
 		</nav>
 		<main>
 			<!--Form with all fields-->
-			<form name="form" method="post" onsubmit="return validateForm()" action="https://webdevbasics.net/scripts/yoga.php">
+			<form name="form" method="post" onsubmit="return validateForm()"
+				action="https://webdevbasics.net/scripts/yoga.php">
 				<label for="firstName">First Name</label><br>
 				<input type="text" name="firstName" placeholder="First Name" size="50" maxlength="50"><br>
 				<label for="lastName">Last Name</label><br>
 				<input type="text" name="lastName" placeholder="Last Name" size="50" maxlength="50"><br>
-				
+
 				<label for="birthYear">Birth Year</label><br>
 				<input type="number" name="birthYear" placeholder="1999" min="1900" max="2022"><br>
-				
+
 				<label for="email">Email Address</label><br>
 				<input type="email" name="email" placeholder="e@mail.com"><br>
-				
+
 				<label for="username">Username</label><br>
-				<input type="text" name="username" id="username" placeholder="Username" minlength="5" maxlength="10"   required><br>
-				
+				<input type="text" name="username" id="username" placeholder="Username" minlength="5" maxlength="10"
+					required><br>
+
 				<label for="password">Password</label><br>
 				<input type="password" name="password" placeholder="Password" minlength="8" required><br>
 				<label for="repeatPassword">Confirm Password</label><br>
-				<input type="password" name="repeatPassword" placeholder="Confirm Password" required><br>	
-				
+				<input type="password" name="repeatPassword" placeholder="Confirm Password" required><br>
+
 				<label for="phoneNumber">Phone Number</label><br>
 				<!--Regex from https://www.regextester.com/94189-->
 				<input type="tel" name="phoneNumber" placeholder="555-555-5555" pattern="^\d{3}-\d{3}-\d{4}$"><br>
-				
+
 				<input type="submit" value="Submit">
 			</form>
 		</main>
+		<aside>
+			<!--https://developer.mozilla.org/en-US/docs/Web/SV
+				https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients
+				https://www.w3schools.com/html/html5_svg.asp-->
+			<svg width="200" height="300" role="img" aria-labelledby="rainbowLabel">
+				<title>Rainbow Gradient</title>
+				<desc id="rainbowLabel">A rainbow gradient</desc>
+				<defs>
+					<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+						<stop offset="0%" style="stop-color: red; stop-opacity: 1;" />
+						<stop offset="20%" style="stop-color: orange; stop-opacity: 1;" />
+						<stop offset="40%" style="stop-color: yellow; stop-opacity: 1;" />
+						<stop offset="60%" style="stop-color: green; stop-opacity: 1;" />
+						<stop offset="80%" style="stop-color: blue; stop-opacity: 1;" />
+						<stop offset="100%" style="stop-color: purple; stop-opacity: 1;" />
+					</linearGradient>
+				</defs>
+				<rect id="rectangle" x="0" y="0" width="200" height="100" fill="url(#gradient)" />
+			</svg>
+		</aside>
 		<footer>
 			<p>©2022 Nick Doing Assignments LLC. Contact us at fakeEmailAddress@ndallc.com.</p>
 		</footer>
 	</div>
 	<script src="script.js"></script>
 </body>
+
 </html>

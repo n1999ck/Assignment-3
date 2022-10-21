@@ -1,6 +1,6 @@
 html, body {
   margin: 0px;
-  height: 100%;
+  height: 1fr;
   width: 100%;
   font-family: sans-serif;
   background-color: #344388;
@@ -41,6 +41,20 @@ main{
   border-top: 5px solid #0b1035;
 }
 
+aside{
+	grid-area: aside;
+}
+canvas{
+	border: 1px solid white;
+	width: 300px;
+	height: 300px;
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
 footer{
   grid-area: footer;
   background-color: #4f5783;
@@ -52,6 +66,11 @@ footer{
   width: 100%;
   object-fit: cover;
   object-position: 0 65%;
+}
+
+#sinclair{
+	/*To make it look like he's peeking out from behind*/
+	margin: -15px;
 }
 
 #navLinks{
@@ -85,10 +104,23 @@ li.everyOtherLine{
   column-gap: 10px;
   row-gap: 15px;
   grid-template-areas: "header header header"
-                       "nav main main"
-                       "nav main main"
-                       "nav main main"
+                       "nav main aside"
+                       "nav main aside"
+                       "nav main aside"
                        "footer footer footer";
+}
+
+@media screen and (max-width: 600px) {
+	body{
+		background-color:  #5c6aad;
+	}
+	.gridWrapper{
+		grid-template-areas: "header"
+							"nav"
+							"main"
+							"aside"
+							"footer";
+	}
 }
 
 table{
